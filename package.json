@@ -1,0 +1,31 @@
+{
+  "name": "storiege",
+  "version": "0.0.1",
+  "description": "Personalized wiki about story, storage",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanhyeong/storiegy.git"
+  },
+  "author": "Chanhyeong Cho <chu7825@naver.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chanhyeong/storiegy/issues"
+  },
+  "homepage": "https://github.com/chanhyeong/storiegy#readme",
+  "dependencies": {
+    "next": "^6.1.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "mocha": "^5.2.0"
+  }
+}

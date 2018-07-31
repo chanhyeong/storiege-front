@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha ./test",
     "dev": "next",
-    "build": "next build",
+    "build": "eslint ./pages/*.js && next build",
     "start": "next start"
   },
   "repository": {
@@ -21,11 +21,17 @@
   "homepage": "https://github.com/chanhyeong/storiegy#readme",
   "dependencies": {
     "next": "^6.1.1",
+    "npm": "^6.2.0",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "regexpp": "^2.0.0"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
     "eslint": "^5.1.0",
-    "mocha": "^5.2.0"
+    "eslint-plugin-react": "^7.10.0",
+    "karma": "^2.0.4",
+    "mocha": "^5.2.0",
+    "sinon": "^6.1.3"
   }
 }

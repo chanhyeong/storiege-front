@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "8"
+deploy:
+  # deploy develop
+  - provider: "script"
+    script: bash build.sh develop
+    on:
+      branch: develop
+  # deploy master
+  - provider: "script"
+    script: bash build.sh master
+    on:
+      branch: master

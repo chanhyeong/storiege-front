@@ -1,0 +1,61 @@
+$global_nav_header_color: #007bff;
+$nav_link_font_color: #FFFFFF;
+$footer_line_color: #007AFF;
+
+header {
+    margin: auto;
+    text-align: center;
+    background-color: $global_nav_header_color;
+
+    nav {
+        margin: auto;
+        width: 768px;
+        text-align: center;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 16px;
+
+            li {
+                :hover {
+                    color: #000000
+                }
+                text-align: center;
+                display: flex;
+                min-width: 50px;
+
+                a {
+                    padding: 6px 20px;
+                    font-weight: bold;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.container {
+    padding: 10px;
+    text-align: center;
+}
+
+footer {
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid $footer_line_color;
+
+    .site_name {
+        font-size: 0.7rem;
+    }
+}
+
+:global(body) {
+    margin: 0px;
+    margin-top: -16px;
+    font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
+          Helvetica, sans-serif;
+}

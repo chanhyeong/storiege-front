@@ -13,9 +13,10 @@
     "plugins": ["react"],
     "extends": "eslint:recommended",
     "rules": {
-        "indent": ["error", 4],
+        "indent": ["error", 2],
         "eqeqeq": ["error", "always"],
         "radix": ["error", "always"],
-        "semi-style": ["error", "last"]
+        "semi-style": ["error", "last"],
+        "react/jsx-uses-vars": "error"
     }
 }

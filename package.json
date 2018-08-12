@@ -4,6 +4,7 @@
   "description": "Personalized wiki about story, storage",
   "main": "index.js",
   "scripts": {
+    "test": "eslint .",
     "dev": "next",
     "build": "next build",
     "start": "next start"
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/chanhyeong/storiegy#readme",
   "dependencies": {
     "@zeit/next-sass": "^0.2.0",
+    "draft-js": "^0.10.5",
     "next": "^6.1.1",
     "node-sass": "^4.9.2",
     "react": "^16.4.1",

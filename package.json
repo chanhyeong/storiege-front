@@ -29,6 +29,7 @@
     "regexpp": "^2.0.0"
   },
   "devDependencies": {
+    "babel-plugin-module-resolver": "^3.1.1",
     "chai": "^4.1.2",
     "eslint": "^5.1.0",
     "eslint-plugin-react": "^7.10.0",

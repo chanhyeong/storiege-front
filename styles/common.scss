@@ -19,7 +19,8 @@ header {
 
             li {
                 :hover {
-                    color: #000000
+                    color: #000000;
+                    background-color: #00c8fad7;
                 }
                 text-align: center;
                 display: flex;
@@ -40,6 +41,8 @@ header {
 .container {
     padding: 10px;
     text-align: center;
+    min-height: 500px;
+    min-width: 200px;
 }
 
 footer {

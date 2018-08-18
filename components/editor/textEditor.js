@@ -1,5 +1,8 @@
 import React from 'react'
-import Draft, {Editor, EditorState, RichUtils} from 'draft-js';
+import Draft, {Editor, EditorState, RichUtils} from 'draft-js'
+import EditorBar from './bar/editorBar'
+
+import 'styles/editor/common.scss'
 
 const emptyContentState = Draft.convertFromRaw({
   entityMap: {},
@@ -11,9 +14,9 @@ const emptyContentState = Draft.convertFromRaw({
       entityRanges: [],
     },
   ],
-});
+})
 
-class MyEditor extends React.Component {
+class TextEditor extends React.Component {
   constructor(props) {
     super(props);
     this.state = {editorState: EditorState.createWithContent(emptyContentState)};
@@ -32,14 +35,17 @@ class MyEditor extends React.Component {
   }
   render() {
     return (
-      <Editor
-        editorKey='editor'
-        editorState={this.state.editorState}
-        handleKeyCommand={this.handleKeyCommand}
-        onChange={this.onChange}
-      />
+      <div className='text_editor'>
+        <EditorBar />
+        <Editor
+          editorKey='editor'
+          editorState={this.state.editorState}
+          handleKeyCommand={this.handleKeyCommand}
+          onChange={this.onChange}
+        />
+      </div>
     )
   }
 }
 
-export default MyEditor;
+export default TextEditor

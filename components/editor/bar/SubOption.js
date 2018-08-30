@@ -1,7 +1,7 @@
 import React from 'react'
 import Draft from 'draft-js'
 
-class BarSubOption extends React.Component {
+class SubOption extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -12,8 +12,8 @@ class BarSubOption extends React.Component {
 
   render() {
     return (
-      <div>
-        <ul className='sub_option'>
+      <div className='sub_option'>
+        <ul>
           {this.props.options.map((option, i) => (
             <li key={i}>
               <a href="#" onClick={this.handleClick} title={option.title}>{option.label}</a>
@@ -25,4 +25,4 @@ class BarSubOption extends React.Component {
   }
 }
 
-export default BarSubOption
+export default SubOption

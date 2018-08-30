@@ -5,12 +5,14 @@ import { FORMAT_LIST } from './optionList'
 import 'styles/editor/editorBar.scss'
 
 class EditorBar extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this._onClick = this._onClick.bind(this);
   }
 
-  handleClick(e) {
+  _onClick(e, style) {
     e.preventDefault()
+    this.props.onEdit(style)
   }
 
   render() {
@@ -19,7 +21,7 @@ class EditorBar extends React.Component {
         <ul>
           {FORMAT_LIST.map((option, i) => (
             <li key={i}>
-              <a href="#" onClick={this.handleClick} title={option.title}>{option.label}</a>
+              <a href="#" onClick={(e) => this._onClick(e, option.style)} title={option.title}>{option.label}</a>
             </li>
           ))}
         </ul>

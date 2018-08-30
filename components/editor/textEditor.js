@@ -2,7 +2,7 @@ import React from 'react'
 import Draft, {Editor, EditorState, RichUtils} from 'draft-js'
 import EditorBar from './bar/editorBar'
 
-import 'styles/editor/common.scss'
+import 'styles/common.scss'
 
 const emptyContentState = Draft.convertFromRaw({
   entityMap: {},
@@ -19,30 +19,44 @@ const emptyContentState = Draft.convertFromRaw({
 class TextEditor extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {editorState: EditorState.createWithContent(emptyContentState)};
-    this.onChange = (editorState) => this.setState({editorState});
-    this.handleKeyCommand = this.handleKeyCommand.bind(this);
+    this.state = {editorState: EditorState.createWithContent(emptyContentState)}
+    this.onChange = (editorState) => this.setState({editorState})
+    this.handleKeyCommand = this.handleKeyCommand.bind(this)
+    this._onEdit = this._onEdit.bind(this)
   }
+
+  _onEdit(style) {
+    this.onChange(
+      RichUtils.toggleInlineStyle(this.state.editorState, style)
+    )
+  }
+
   handleKeyCommand(command, editorState) {
-    const newState = RichUtils.handleKeyCommand(editorState, command);
+    const newState = RichUtils.handleKeyCommand(editorState, command)
     if (newState) {
-      this.onChange(newState);
-      return 'handled';
+      this.onChange(newState)
+      return 'handled'
     }
-    return 'not-handled';
+    return 'not-handled'
   }
+
   componentDidMount() {
   }
+
   render() {
     return (
       <div className='text_editor'>
-        <EditorBar />
-        <Editor
-          editorKey='editor'
-          editorState={this.state.editorState}
-          handleKeyCommand={this.handleKeyCommand}
-          onChange={this.onChange}
+        <EditorBar 
+          onEdit={this._onEdit}
         />
+        <div className='write_box'>
+          <Editor
+            editorKey='editor'
+            editorState={this.state.editorState}
+            handleKeyCommand={this.handleKeyCommand}
+            onChange={this.onChange}
+          />
+        </div>
       </div>
     )
   }

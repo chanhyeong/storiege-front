@@ -1,5 +1,4 @@
 import React from 'react'
-import Draft from 'draft-js'
 
 import { FORMAT_LIST } from './optionList'
 import 'styles/editor/editorBar.scss'

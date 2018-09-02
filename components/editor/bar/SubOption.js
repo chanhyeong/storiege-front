@@ -1,5 +1,4 @@
 import React from 'react'
-import Draft from 'draft-js'
 
 class SubOption extends React.Component {
   constructor(props) {

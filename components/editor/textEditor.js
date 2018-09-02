@@ -9,7 +9,7 @@ const emptyContentState = Draft.convertFromRaw({
   blocks: [
     {
       text: '',
-      key: 'foo',
+      key: 'first',
       type: 'unstyled',
       entityRanges: [],
     },

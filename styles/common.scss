@@ -19,7 +19,8 @@ header {
 
             li {
                 :hover {
-                    color: #000000
+                    color: #000000;
+                    background-color: #00c8fad7;
                 }
                 text-align: center;
                 display: flex;
@@ -37,9 +38,27 @@ header {
     }
 }
 
+.text_editor {
+    margin: auto;
+    text-align: center;
+    border: 1px solid #000000;
+    padding-bottom: 20px;
+    max-width: 1000px;
+
+    .write_box {
+        border: 0.8px solid #000000;
+        margin: 0 15px 0 15px;
+        min-height: 200px;
+        padding: 15px 10px 15px 10px;
+        text-align: left;
+    }
+}
+
 .container {
     padding: 10px;
     text-align: center;
+    min-height: 500px;
+    min-width: 200px;
 }
 
 footer {

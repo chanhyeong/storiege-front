@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import '../styles/common.scss'
+import 'styles/common.scss'
 
 export default () => (
   <header>

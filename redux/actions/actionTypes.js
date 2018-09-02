@@ -1,0 +1,14 @@
+export default {
+  /**
+   * 회원정보 관련
+   */
+  SIGN_IN: 'SIGN_IN',
+  SIGN_IN_SUCCESS: 'SIGN_IN_SUCCESS',
+  SIGN_IN_ERROR: 'SIGN_IN_ERROR',
+  
+  SIGN_UP: 'SIGN_UP',
+  SIGN_UP_SUCCESS: 'SIGN_UP_SUCCESS',
+  SIGN_UP_ERROR: 'SIGN_UP_ERROR',
+
+  LOG_OUT: 'LOG_OUT',
+}

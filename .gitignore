@@ -14,4 +14,4 @@ test/node_modules
 *.log
 
 # Project configuration
-config
+config/*.json

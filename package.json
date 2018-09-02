@@ -11,21 +11,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chanhyeong/storiegy.git"
+    "url": "git+https://github.com/chanhyeong/storiege.git"
   },
-  "author": "Chanhyeong Cho <chu7825@naver.com>",
+  "author": "Chanhyeong Cho <chu7825@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chanhyeong/storiegy/issues"
+    "url": "https://github.com/chanhyeong/storiege/issues"
   },
-  "homepage": "https://github.com/chanhyeong/storiegy#readme",
+  "homepage": "https://github.com/chanhyeong/storiege#readme",
   "dependencies": {
     "@zeit/next-sass": "^0.2.0",
     "draft-js": "^0.10.5",
     "next": "^6.1.1",
+    "next-redux-wrapper": "^2.0.0",
     "node-sass": "^4.9.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
     "regexpp": "^2.0.0"
   },
   "devDependencies": {
@@ -35,6 +39,7 @@
     "eslint-plugin-react": "^7.10.0",
     "karma": "^2.0.4",
     "mocha": "^5.2.0",
+    "redux-logger": "^3.0.6",
     "sinon": "^6.1.3"
   }
 }

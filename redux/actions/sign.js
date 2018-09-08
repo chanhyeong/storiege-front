@@ -1,21 +1,19 @@
+/**
+ * 회원 관련 action
+ */
 import AT from './actionTypes'
 
-export const setVisibilityFilter = filter => ({
-  type: 'SET_VISIBILITY_FILTER',
-  filter
-})
-
 export default {
-  signIn: (account) => {
+  signIn: (payload) => {
     return {
       type: AT.SIGN_IN,
-      account
+      payload
     }
   },
-  signUp: (userInfo) => {
+  signUp: (payload) => {
     return {
       type: AT.SIGN_UP,
-      userInfo
+      payload
     }
   },
   logout: () => {
